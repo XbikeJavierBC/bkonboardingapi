@@ -1,0 +1,12 @@
+/* 
+  File.strings
+  GNNetworkServices
+
+  Created by Javier Bolaños on 22/07/20.
+  Copyright © 2020 GoNet. All rights reserved.
+*/
+
+"extremelySimple"   = "Extremadamente simple de\nusar";
+"trackYourTime"     = "Rastrea tu tiempo y\ndistancia";
+"seeYourProgress"   = "¡Vea su progreso\ny desafíese\na sí mismo!";
+"skip"              = "Saltar";

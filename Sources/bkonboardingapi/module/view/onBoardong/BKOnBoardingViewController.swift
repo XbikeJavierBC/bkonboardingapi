@@ -9,7 +9,7 @@ import UIKit
 import ghgungnircore
 import bksdkcore
 
-public class BKOnBoardingViewController: BKBasePageViewController {
+public class BKOnBoardingViewController: BKBaseViewController {
     //MARK: @IBOutlet
     @IBOutlet private var rootView: UIView! {
         didSet {
@@ -17,22 +17,12 @@ public class BKOnBoardingViewController: BKBasePageViewController {
         }
     }
 
-    @IBOutlet private weak var contentView: UIView! {
+    @IBOutlet weak var contentView: UIView! {
         didSet {
             contentView.backgroundColor = .clear
         }
     }
     
-    internal var onBoardingViewModel: BKOnBoardingViewModelProtocol? {
-        self.viewModel as? BKOnBoardingViewModel
-    }
-    
-    //MARK: Variables
-    internal lazy var pageList: [UIViewController] = []
-    internal lazy var pageControl = UIPageControl()
-    internal let initialPage = 0
-    
-    //MARK: Life Cicle
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,12 +35,7 @@ public class BKOnBoardingViewController: BKBasePageViewController {
         self.updateUI()
     }
     
-    //MARK: @IBAction
-    @IBAction func skipButtonAction(_ sender: Any) {
-        
-    }
-    
-    @IBAction func nextFlowButtonAction(_ sender: Any) {
+    public override func rightNavButtonSelector() {
         BKOnBoardingCoordinator.gotoDashboardFlow(
             manager: self.controllerManager
         )

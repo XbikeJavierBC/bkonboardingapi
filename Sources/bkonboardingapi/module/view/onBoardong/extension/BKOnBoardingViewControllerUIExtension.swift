@@ -7,57 +7,31 @@
 
 import UIKit
 import TinyConstraints
+import bksdkcore
 
 extension BKOnBoardingViewController {
     func setupUI() {
-        self.dataSource = self
-        self.delegate = self
+        guard let pageViewController = BKApiFlow.pageOnBoardingControl.controller as? BKOnBoardingPageViewController else {
+            return
+        }
         
-        self.pageControl.addTarget(self, action: #selector(pageControlTappedAction), for: .valueChanged)
+        self.addChild(pageViewController)
+        pageViewController.didMove(toParent: self)
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        let controller01 = UIViewController()
-        let controller02 = UIViewController()
-        let controller03 = UIViewController()
+        self.contentView.addSubview(pageViewController.view)
+        pageViewController.view.edgesToSuperview()
         
-        self.pageList.append(
-            contentsOf: [
-                controller01,
-                controller02,
-                controller03
-            ]
+        self.addNavButtonRight(
+            text: BKOnBoardingLocalization.skip.localize
         )
-        
-        self.setViewControllers(
-            [self.pageList[self.initialPage]],
-            direction: .forward,
-            animated: true
-        )
-    }
-    
-    private func pageControlStyle() {
-        self.pageControl.translatesAutoresizingMaskIntoConstraints = false
-        self.pageControl.currentPageIndicatorTintColor = .black
-        self.pageControl.pageIndicatorTintColor = .systemGray2
-        self.pageControl.numberOfPages = self.pageList.count
-        self.pageControl.currentPage = self.initialPage
-        
-        self.view.addSubview(self.pageControl)
-        
-        self.pageControl.leadingToSuperview()
-        self.pageControl.trailingToSuperview()
-        self.pageControl.bottomToSuperview()
-        self.pageControl.height(20)
     }
     
     func updateUI() {
-        
-    }
-    
-    @objc func pageControlTappedAction(_ sender: UIPageControl) {
-        self.setViewControllers(
-            [self.pageList[sender.currentPage]],
-            direction: .forward,
-            animated: true
+        self.controllerManager?.setNavBarHiden(hidden: false)
+        self.setDarkBackStyle(
+            color: .white,
+            font: .abelRegular20
         )
     }
 }

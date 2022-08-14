@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK: DataSource
-extension BKOnBoardingViewController: UIPageViewControllerDataSource {
+extension BKOnBoardingPageViewController: UIPageViewControllerDataSource {
     public func pageViewController(
         _ pageViewController: UIPageViewController,
         viewControllerBefore viewController: UIViewController
@@ -37,7 +37,7 @@ extension BKOnBoardingViewController: UIPageViewControllerDataSource {
 }
 
 //MARK: Delegate
-extension BKOnBoardingViewController: UIPageViewControllerDelegate {
+extension BKOnBoardingPageViewController: UIPageViewControllerDelegate {
     public func pageViewController(
         _ pageViewController: UIPageViewController,
         didFinishAnimating finished: Bool,

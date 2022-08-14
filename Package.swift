@@ -28,6 +28,9 @@ let package = Package(
             name: "bkonboardingapi",
             dependencies: [
                 "bksdkcore"
+            ],
+            resources: [
+                .process("resources/localizable")
             ]
         ),
         .testTarget(

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--On Boarding View Controller-->
+        <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController restorationIdentifier="BKOnBoardingViewController" storyboardIdentifier="BKOnBoardingViewController" id="Y6W-OH-hqX" customClass="BKOnBoardingViewController" customModule="bkonboardingapi" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="94"/>
+            <point key="canvasLocation" x="-647" y="222"/>
+        </scene>
+        <!--On Boarding View Controller-->
+        <scene sceneID="IBc-Za-gee">
+            <objects>
+                <pageViewController restorationIdentifier="BKOnBoardingViewController" storyboardIdentifier="BKOnBoardingViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hCu-SH-4ct" customClass="BKOnBoardingViewController" customModule="bkonboardingapi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ck-PX-uCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-469"/>
         </scene>
     </scenes>
 </document>

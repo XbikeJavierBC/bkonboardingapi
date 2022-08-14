@@ -27,6 +27,11 @@ public class BKOnBoardingViewController: BKBasePageViewController {
         self.viewModel as? BKOnBoardingViewModel
     }
     
+    //MARK: Variables
+    internal lazy var pageList: [UIViewController] = []
+    internal lazy var pageControl = UIPageControl()
+    internal let initialPage = 0
+    
     //MARK: Life Cicle
     public override func viewDidLoad() {
         super.viewDidLoad()

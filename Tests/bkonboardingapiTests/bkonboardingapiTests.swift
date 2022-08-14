@@ -6,6 +6,6 @@ final class bkonboardingapiTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(bkonboardingapi().text, "Hello, World!")
+        //XCTAssertEqual(bkonboardingapi().text, "Hello, World!")
     }
 }
